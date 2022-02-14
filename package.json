@@ -1,0 +1,23 @@
+{
+  "name": "interior-studio-website",
+  "version": "1.0.0",
+  "description": "My first Gulp experience",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreylaptiev/interior-studio-website.git"
+  },
+  "author": "Andrey Laptiev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreylaptiev/interior-studio-website/issues"
+  },
+  "homepage": "https://github.com/andreylaptiev/interior-studio-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2"
+  }
+}
