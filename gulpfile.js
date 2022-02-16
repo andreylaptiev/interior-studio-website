@@ -10,6 +10,7 @@ const minify      = require('gulp-terser');
 const imagemin    = require('gulp-imagemin');
 const del         = require('del');
 const fileinclude = require('gulp-file-include');
+const rename      = require('gulp-rename');
 
 
 function browsersync() {
@@ -35,9 +36,13 @@ function buildhtml() {
 }
 
 function styles() {
-  return src('src/sass/style.scss')
+  return src([
+    'src/sass/*.scss',
+    '!src/sass/_fonts.scss',
+    '!src/sass/_vars.scss'
+  ])
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(concat('style.min.css'))
+    .pipe(rename({extname: '.min.css'}))
     .pipe(dest('src/css/'))
     .pipe(browserSync.stream());
 }
