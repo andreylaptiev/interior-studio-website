@@ -36,8 +36,13 @@ ul[class] {
   list-style: none;
 }
 
+ol,
+ul,
+li {
+  line-height: 90%;
+}
+
 img {
-  max-width: 100%;
   display: block;
 }
 
@@ -48,6 +53,6 @@ select {
   font: inherit;
 }
 
-a{
+a {
   text-decoration: none;
 }
