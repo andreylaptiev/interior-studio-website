@@ -2,6 +2,14 @@
 @import 'vars';
 @import 'fonts';
 
+h1 {
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: #fff;
+}
+
 ._lock {
   overflow: hidden;
 }
@@ -31,7 +39,7 @@
 @media (min-width: 768px) {
   .header__inner {
     &::before {
-      height: 100px;
+      height: 90px;
     }
   }
 }
@@ -271,7 +279,7 @@
 @media (min-width: 1024px) {
   .header {
     &__inner {
-    padding: 32px 0;
+    padding: 24px 0;
     }
   }
   .logo {
