@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('../components/head.html', {
+    "title": "404",
+    "stylesheet": "css/pagenotfound.min.css"
+  })
+</head>
+<body>
+  <div class="content">
+  @@include('../components/header.html')
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <div class="pagenotfound">
+            <div class="pagenotfound__title">
+              <h2 class="section-title">Page not found</h2>
+            </div>
+            <div class="pagenotfound__text">
+              <p class="section-text">Something went wrong. Page not found</p>
+            </div>
+            <div class="pagenotfound__goto">
+              <div class="discover">
+                <a class="discover__link" href="index.html">GO TO MAIN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('../components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+</html>
