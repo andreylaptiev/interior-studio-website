@@ -14,6 +14,22 @@ h1 {
   overflow: hidden;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .main {
+  padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .sticky + .main {
+    padding-top: 90px;
+  }
+}
+
 .header {
   width: 100%;
   background-color: $main-color-dark;
@@ -81,20 +97,24 @@ h1 {
 .navigation {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   overflow: auto;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  padding: 100px 24px 25px 24px;
+  padding: 150px 24px 25px 24px;
   transition: left 1s ease;
   background-color: $main-color-dark;
   &._active {
     left: 0;
     transition: left 1s ease;
+  }
+  &__links {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__list {
     margin-bottom: 65px;
@@ -111,6 +131,7 @@ h1 {
     }
   }
   &__contacts {
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -119,6 +140,7 @@ h1 {
   &__langs {
     display: none;
     font-size: 11px;
+    color: #fff;
   }
   &__city-select {
     appearance:none;
@@ -152,8 +174,11 @@ h1 {
 
 @media (min-width: 768px) {
   .navigation {
-    width: 615px;
-    padding: 350px 48px 32px 48px;
+    align-items: flex-start;
+    padding: 150px 48px 32px 48px;
+    &__list {
+      margin-left: 137px;
+    }
     &__item {
       margin-bottom: 40px;
       text-align: left;
@@ -168,7 +193,6 @@ h1 {
     &__langs {
       display: block;
       margin-right: 32px;
-      color: #fff;
       &>span {
         margin-right: 15px;
         &:last-child {
@@ -192,8 +216,10 @@ h1 {
 
 @media (min-width: 1024px) {
   .navigation {
-    width: 615px;
-    padding: 210px 55px 40px 55px;
+    padding: 150px 55px 40px 55px;
+    &__list {
+      margin-left: 160px;
+    }
   }
 }
 
@@ -207,11 +233,14 @@ h1 {
     &__list {
       display: flex;
       align-items: center;
-      margin-bottom: 0;
+      margin: 0;
     }
     &__item {
       margin-right: 50px;
       margin-bottom: 0;
+      &:first-of-type {
+        display: none;
+      }
     }
     &__link {
       font-family: 'Montserrat-SemiBold', sans-serif;
@@ -260,7 +289,7 @@ h1 {
     }
   }
   .logo {
-    margin-right: 95px;
+    margin-right: 49px;
   }
   .menu {
     flex-direction: row;
@@ -283,13 +312,13 @@ h1 {
     }
   }
   .logo {
-    margin-right: 90px;
+    margin-right: 63px;
   }
 }
 
 @media (min-width: 1440px) {
   .logo {
-    margin-right: 140px;
+    margin-right: 113px;
   }
   .menu {
     &__burger {
