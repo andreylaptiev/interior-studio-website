@@ -1,0 +1,219 @@
+@import 'header_dark';
+@import 'footer_dark';
+
+body {
+  background-color: $main-color-dark;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.main {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .main {
+    height: calc(100% - 90px);
+    align-items: center;
+  }
+}
+
+.section-title {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+.section-subtitle {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fafafa;
+}
+
+.section-text {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact__text .section-text {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #fafafa;
+}
+
+address {
+  font-style: normal;
+}
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  &__text {
+    max-width: 315px;
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .get-in-touch {
+    &__text {
+      max-width: 390px;
+    }
+  }
+}
+
+.contact {
+  margin-top: 48px;
+  &__addresses {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  &__text {
+    margin-top: 18px;
+  }
+  &__email-langs {
+    margin-top: 40px;
+  }
+  &__langs {
+    margin-top: 15px;
+    &>span {
+      margin-right: 16px;
+    }
+  }
+  &__button {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    margin-top: 58px;
+    display: grid;
+    grid-template-columns: 183px auto;
+    grid-template-rows: auto 42px;
+    gap: 56px 183px;
+    grid-template-areas: 
+      'address .'
+      'button email';
+    &__addresses {
+      gap: 0 35px;
+      grid-area: address;
+      grid-column: span 2;
+    }
+    &__email-langs {
+      margin-top: 0;
+      grid-area: email;
+    }
+    &__button {
+      margin-top: 0;
+      grid-area: button;
+    }
+    &__langs {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    margin-top: 64px;
+    grid-template-columns: auto auto;
+    gap: 64px 77px;
+    grid-template-areas: 
+      'address email'
+      'button .';
+    &__addresses {
+      gap: 0 40px;
+      grid-column: 1;
+    }
+    &__langs {
+      margin-top: 21px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact {
+    margin-top: 72px;
+    gap: 72px 296px;
+    &__addresses {
+      gap: 0 102px;
+    }
+  }
+}
+
+.item-1 {
+  width: 133px;
+}
+
+.item-2 {
+  width: 154px;
+}
+
+.item-3 {
+  width: 158px;
+}
+
+@media (min-width: 768px) {
+  .item-1 {
+    width: 133px;
+  }
+  
+  .item-2 {
+    width: 162px;
+  }
+  
+  .item-3 {
+    width: 154px;
+  }
+}
+
+.contact__email-langs a, span {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: #fafafa;
+}
+
+// other button styles are imported with header_dark
+.contact__button .button {
+  width: 183px;
+  color: #080808;
+  background-color: #fafafa;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
