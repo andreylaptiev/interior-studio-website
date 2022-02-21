@@ -22,3 +22,17 @@ window.addEventListener('scroll', () => {
     header.classList.remove('sticky');
   }
 });
+
+// swiper on page 'about'
+const aboutSwiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 12,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: false,
+  },
+});
