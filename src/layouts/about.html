@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('../components/head.html', {
+    "title": "About",
+    "stylesheet": "css/about.min.css"
+  })
+  <link rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+  @@include('../components/header.html')
+  <main class="main">
+    <section class="section head">
+      <div class="container">
+        <div class="head__inner">
+          <div class="head__title">
+            <h2 class="section-title">Company Philosophy</h2>
+          </div>
+          <div class="head__text">
+            <p class="section-text">
+              The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section philosophy">
+      <div class="container">
+        <div class="philosophy__inner">
+          <div class="philosophy__text-content">
+            <div class="philosophy__title">
+              <h2 class="section-title">Company Philosophy</h2>
+            </div>
+            <div class="philosophy__text">
+              <p class="section-text">
+                The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles and architecture. 
+              </p>
+            </div>
+            <div class="swiper-button-prev">
+              <img src="images/prev-button.svg" alt="prev button">
+            </div>
+            <div class="swiper-button-next">
+              <img src="images/next-button.svg" alt="next button">
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="philosophy__swiper">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/about-slide-1.png" alt="about slide">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/about-slide-1.png" alt="about slide">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('../components/footer.html')
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
