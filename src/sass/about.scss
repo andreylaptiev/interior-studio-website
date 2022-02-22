@@ -245,3 +245,138 @@ body {
     width: 218px;
   }
 }
+
+.statistic .section-title {
+  font-size: 36px;
+}
+
+@media (min-width: 768px) {
+  .statistic .section-title {
+    font-size: 46px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .statistic .section-title {
+    font-size: 56px;
+  }
+}
+
+.statistic {
+  &__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  &__image>img {
+    width: 100%;
+    margin-top: 24px;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__numbers {
+    display: grid;
+    grid-template-columns: 132px 132px;
+    gap: 44px 44px;
+    grid-template-areas:
+      'a b'
+      'c d';
+    justify-items: center;
+  }
+  &__text {
+    margin-top: 24px;
+    text-align: center;
+  }
+}
+
+.item1 {
+  grid-area: a;
+}
+
+.item2 {
+  grid-area: b;
+}
+
+.item3 {
+  grid-area: c;
+}
+
+.item4 {
+  grid-area: d;
+}
+
+@media (min-width: 768px) {
+  .statistic {
+    &__image>img {
+      margin-top: 50px;
+    }
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__numbers {
+      grid-template-columns: 100px 132px;
+    }
+    &__text {
+      width: 330px;
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .statistic {
+    &__inner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    &__image>img {
+      margin-top: 0;
+    }
+    &__content {
+      width: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 50px;
+    }
+    &__numbers {
+      gap: 44px 79px;
+    }
+    &__text {
+      width: 382px;
+      margin-top: 75px;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .statistic {
+    background-image: url(../images/statistic-bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .statistic {
+    &__inner {
+      padding-left: 66px;
+      justify-content: flex-start;
+    }
+    &__content {
+      margin-left: 132px;
+    }
+  }
+}
