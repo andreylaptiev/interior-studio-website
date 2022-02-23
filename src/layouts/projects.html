@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('../components/head.html', {
+    "title": "Projects",
+    "stylesheet": "css/projects.min.css"
+  })
+</head>
+<body>
+  @@include('../components/header.html')
+  <main class="main">
+    <section class="section our-projects">
+      <div class="container">
+        <div class="our-projects__inner">
+          <div class="our-projects__title">
+            <h2 class="section-title">Our Projects</h2>
+          </div>
+          <div class="our-projects__content">
+            <div class="our-projects__text">
+              <p class="section-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+              </p>
+            </div>
+            <div class="our-projects__filter">
+              <select class="our-projects__select">
+                <option value="House">House</option>
+                <option selected value="Apartments">Apartments</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Architecture">Architecture</option>
+              </select>
+              <div class="our-projects__filter-links">
+                <a class="our-projects__link" href="#">House</a>
+                <a class="our-projects__link" href="#">Apartments</a>
+                <a class="our-projects__link" href="#">Commerce</a>
+                <a class="our-projects__link" href="#">Architecture</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('../components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+</html>
