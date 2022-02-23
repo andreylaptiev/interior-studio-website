@@ -36,7 +36,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .section {
     margin-top: 140px;
   }
@@ -246,18 +246,21 @@ body {
   }
 }
 
-.statistic .section-title {
+.statistic .section-title,
+.founder__stat-item .section-title {
   font-size: 36px;
 }
 
 @media (min-width: 768px) {
-  .statistic .section-title {
+  .statistic .section-title,
+  .founder__stat-item .section-title {
     font-size: 46px;
   }
 }
 
 @media (min-width: 1024px) {
-  .statistic .section-title {
+  .statistic .section-title,
+  .founder__stat-item .section-title {
     font-size: 56px;
   }
 }
@@ -277,6 +280,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  &__mini-image {
+    display: none;
   }
   &__numbers {
     display: grid;
@@ -361,14 +367,6 @@ body {
   }
 }
 
-@media (min-width: 1300px) {
-  .statistic {
-    background-image: url(../images/statistic-bg.png);
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-  }
-}
-
 @media (min-width: 1440px) {
   .statistic {
     &__inner {
@@ -376,7 +374,149 @@ body {
       justify-content: flex-start;
     }
     &__content {
+      position: relative;
       margin-left: 132px;
+    }
+    &__mini-image {
+      display: block;
+      position: absolute;
+      left: 494px;
+      bottom: -140px;
+    }
+  }
+}
+
+.founder__quote .section-text {
+  font-size: 20px;
+}
+
+.founder {
+  &__career {
+    margin-top: 24px;
+  }
+  &__career>p {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4em;
+  }
+  &__portrait {
+    margin-top: 24px;
+  }
+  &__portrait>img {
+    width: 100%;
+  }
+  &__quote {
+    display: flex;
+    margin-top: 32px;
+  }
+  &__quote-symbol {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  &__statistic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  &__team {
+    display: none;
+  }
+  &__text {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .founder {
+    &__about {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    &__achievements {
+      margin-right: 30px;
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .founder {
+    &__about {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__achievements {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 50px;
+    }
+    &__career {
+      margin-top: 32px;
+    }
+    &__inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    &__intro {
+      position: relative;
+      padding-top: 60px;
+      margin-right: 30px;
+    }
+    &__portrait {
+      margin-top: 0;
+    }
+    &__quote {
+      margin-top: 56px;
+    }
+    &__statistic {
+      margin-top: 0;
+      justify-content: flex-start;
+      gap: 0 79px;
+    }
+    &__team {
+      display: block;
+      margin-top: 164px;
+    }
+    &__text {
+      margin-top: 56px;
+      max-width: 516px;
+    }
+  }
+  .founder__quote .section-text {
+    max-width: 383px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .founder {
+    margin-top: 180px;
+    &__achievements {
+      margin-top: 100px;
+    }
+    &__inner {
+      justify-content: flex-end;
+      padding-right: 82px;
+      background-position: 10% 80%;
+    }
+    &__intro {
+      margin-right: 132px;
+      position: relative;
+    }
+    &__quote-symbol {
+      position: absolute;
+      left: -50px;
+      margin-right: 32px;
+    }
+    &__team {
+      position: absolute;
+      left: -60px;
     }
   }
 }
