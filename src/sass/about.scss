@@ -2,36 +2,16 @@
 @import 'footer_light';
 
 body {
-  // display: flex;
-  // flex-direction: column;
   background-color: $main-color-light;
 }
-
-// .content {
-//   // flex: 1 0 auto;
-// }
-
-// .footer {
-//   flex-shrink: 0;
-// }
-
-// .main {
-//   // height: calc(100% - 60px);
-//   // display: flex;
-//   // flex-direction: column;
-//   // justify-content: center;
-// }
-
-// @media (min-width: 768px) {
-//   .main {
-//     height: calc(100% - 90px);
-//   }
-// }
 
 .section {
   width: 100%;
   margin-top: 70px;
   &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-of-type {
     margin-top: 0;
   }
 }
@@ -95,7 +75,8 @@ body {
 }
 
 .head__title .section-title,
-.head__text .section-text {
+.head__text .section-text,
+.lorem__title .section-title {
   color: #fff;
 }
 
@@ -246,12 +227,14 @@ body {
   }
 }
 
+.lorem .section-title,
 .statistic .section-title,
 .founder__stat-item .section-title {
   font-size: 36px;
 }
 
 @media (min-width: 768px) {
+  .lorem .section-title,
   .statistic .section-title,
   .founder__stat-item .section-title {
     font-size: 46px;
@@ -259,6 +242,7 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .lorem .section-title,
   .statistic .section-title,
   .founder__stat-item .section-title {
     font-size: 56px;
@@ -461,7 +445,7 @@ body {
     }
     &__inner {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: flex-start;
     }
     &__intro {
@@ -519,4 +503,166 @@ body {
       left: -60px;
     }
   }
+}
+
+.lorem__text .section-text {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.lorem {
+  padding: 100px 0;
+  background-color: $main-color-dark;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    max-width: 427px;
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .lorem {
+    padding: 200px 0;
+    background-image: url(../images/lorem-bg.png);
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lorem {
+    padding: 340px 0;
+    background-image: url(../images/lorem-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.work .section-title {
+  line-height: 1.4em;
+}
+
+.work__email-langs a, span {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: $main-color-dark;
+}
+
+.work {
+  background-color: #ececec;
+  padding: 70px 0 90px 0;
+  color: $main-color-dark;
+  &__button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  &__email-langs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  &__form {
+    position: relative;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #515151;
+    }
+  }
+  &__info {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__input {
+    width: 92%;
+    background-color: #ececec;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat-Light', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+    &:focus {
+      color: #515151;
+    }
+  }
+  &__langs>span {
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .work {
+    &__do-you-want {
+      padding-bottom: 54px;
+    }
+    &__form {
+      width: 350px;
+      margin-top: 50px;
+    }
+    &__info {
+      margin-top: 0;
+      margin-left: 30px;
+      max-width: 285px;
+    }
+    &__inner {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .work {
+    padding-top: 140px;
+    &__form {
+      width: 382px;
+      margin-top: 80px;
+    }
+    &__info {
+      max-width: 366px;
+      margin-left: 100px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .work {
+    &__form {
+      margin-top: 131px;
+    }
+    &__info {
+      margin-left: 280px;
+    }
+  }
+}
+
+.footer {
+  background-color: #ececec;
 }
