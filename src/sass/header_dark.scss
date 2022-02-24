@@ -105,6 +105,7 @@ h1 {
   height: 100%;
   padding: 150px 24px 25px 24px;
   transition: left 1s ease;
+  z-index: 2;
   background-color: $main-color-dark;
   &._active {
     left: 0;
