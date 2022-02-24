@@ -88,6 +88,31 @@ body {
   }
 }
 
+.projects {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px 0;
+  }
+  &__project {
+    width: 100%;
+    height: 327px;
+    background: $main-color-light url(../images/residence-lighthouse.png)
+      no-repeat center center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects {
+    &__project {
+    height: 672px;
+    }
+  }
+}
+
 .section {
   width: 100%;
 }
