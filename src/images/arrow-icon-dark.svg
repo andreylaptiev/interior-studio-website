@@ -1,7 +1,3 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12">
-	<title>caret-down-fill-svg</title>
-	<style>
-		.s0 { fill: #000000 } 
-	</style>
-	<path id="Layer" class="s0" d="m7.2 11.1l-4.7-5.4c-0.6-0.7-0.2-1.7 0.7-1.7h9.6q0.3 0 0.5 0.2q0.3 0.1 0.4 0.4q0.1 0.3 0.1 0.5q-0.1 0.3-0.3 0.6l-4.7 5.4q-0.2 0.2-0.4 0.3q-0.2 0.1-0.4 0.1q-0.2 0-0.4-0.1q-0.2-0.1-0.4-0.3z" />
+<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 1L4.5 4.5L1 1" stroke="#080808" stroke-width="1.4"/>
 </svg>
