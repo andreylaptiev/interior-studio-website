@@ -5,6 +5,37 @@ body {
   background-color: $main-color-light;
 }
 
+.discover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 8px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  &::after {
+    content: '';
+    width: 56px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  &__link {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 8px;
+  }
+}
+
+.header {
+  z-index: 5;
+}
+
 .our-projects {
   padding: 56px 0 64px 0;
   &__content {
@@ -89,6 +120,36 @@ body {
 }
 
 .projects {
+  &__description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    z-index: 2;
+  }
+  &__discover {
+    margin-top: 16px;
+  }
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 16px;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #fff;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -99,17 +160,101 @@ body {
   &__project {
     width: 100%;
     height: 327px;
-    background: $main-color-light url(../images/residence-lighthouse.png)
-      no-repeat center center;
-    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 16.12%, rgba(0, 0, 0, 0.63) 101.15%);
+    }
   }
+}
+
+.projects__project:hover::before {
+  content: none;
 }
 
 @media (min-width: 768px) {
   .projects {
-    &__project {
-    height: 672px;
+    &__description {
+      padding: 26px 32px 38px 32px;
     }
+    &__discover {
+      margin-top: 24px;
+    }
+    &__project {
+      height: 672px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    &__description {
+      padding: 32px;
+    }
+    &__inner {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill, 452px);
+      gap: 6px 6px;
+      grid-template-areas: 
+        'p1 p2'
+        'p3 p3'
+        'p4 p5'
+        'p6 p6';
+    }
+    &__project {
+      height: 452px;
+    }
+  }
+  .project1 {grid-area: p1;}
+  .project2 {grid-area: p3;}
+  .project3 {grid-area: p2;}
+  .project4 {grid-area: p4;}
+  .project5 {grid-area: p5;}
+  .project6 {grid-area: p6;}
+}
+
+@media (min-width: 1440px) {
+  .projects {
+    &__description {
+      display: none;
+    }
+    &__discover {
+      display: none;
+    }
+    &__inner {
+      max-width: 1314px;
+      grid-template-rows: repeat(auto-fill, 653px);
+    }
+    &__project {
+      height: 653px;
+      &::before {
+        content: none;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24));
+      }
+    }
+  }
+  .projects__project:hover::before {
+    content: '';
+  }
+  .projects__project:hover .projects__description {
+    display: flex;
+  }
+}
+
+.projects__title .section-title {
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (min-width: 1440px) {
+  .projects__title .section-title {
+    font-size: 22px;
   }
 }
 
