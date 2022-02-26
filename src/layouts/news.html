@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('../components/head.html', {
+    "title": "News",
+    "stylesheet": "css/news.min.css"
+  })
+</head>
+<body>
+  @@include('../components/header.html')
+  <main class="main">
+    <section class="section our-news">
+      <div class="our-news__inner">
+        <div class="our-news__title">
+          <h2 class="section-title">Our latest news</h2>
+        </div>
+        <div class="our-news__filter">
+          <select class="our-news__select">
+            <option value="All">All</option>
+            <option selected value="Blog">Blog</option>
+            <option value="News">News</option>
+            <option value="Designer advice">Designer advice</option>
+          </select>
+          <div class="our-news__filter-links">
+            <a class="our-news__link" href="#">All</a>
+            <a class="our-news__link" href="#">Blog</a>
+            <a class="our-news__link" href="#">News</a>
+            <a class="our-news__link" href="#">Advice from the designer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('../components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+</html>

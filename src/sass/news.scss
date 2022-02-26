@@ -1,0 +1,112 @@
+@import 'header_light';
+@import 'footer_light';
+
+body {
+  background-color: $main-color-light;
+}
+
+.our-news {
+  padding: 56px 24px 64px 24px;
+  &__filter {
+    margin-top: 24px;
+  }
+  &__filter-links {
+    display: none;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__link {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #828282;
+    margin-right: 28px;
+    &:hover {
+      color: #080808;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .our-news {
+    padding: 48px 24px 102px 124px;
+    &__filter {
+      margin-top: 32px;
+    }
+    &__filter-links {
+      display: block;
+    }
+    &__select {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .our-news {
+    padding: 72px 0 110px 159px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .our-news {
+    display: flex;
+    justify-content: center;
+    padding: 118px 0 124px 0;
+    &__filter {
+      margin-top: 0;
+    }
+    &__inner {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 412px;
+    }
+    &__link {
+      font-family: 'Montserrat-SemiBold', sans-serif;
+      font-weight: 600;
+    }
+  }
+}
+
+.section-title {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2em;
+  color: #080808;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+select {
+  appearance: none;
+  outline: none;
+  background-color: $main-color-light;
+  background-image: url(../images/arrow-icon-dark.svg);
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  width: 140px;
+  height: 29px;
+  padding-left: 13px;
+  border: 1px solid #C4C4C4;
+  border-radius: 88px;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: #080808;
+}
