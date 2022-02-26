@@ -36,3 +36,11 @@ const aboutSwiper = new Swiper('.swiper', {
     draggable: false,
   },
 });
+
+// go to 'one-project' page when click on div with its image
+const projects = document.querySelectorAll('.projects__project');
+if (projects) {
+  projects.forEach(project => project.addEventListener('click', () => {
+    window.open(project.dataset.url)
+  }));
+}
