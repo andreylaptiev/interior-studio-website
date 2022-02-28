@@ -213,8 +213,8 @@ body {
 }
 
 .email {
-  padding: 70px 0 90px 0;
-  color: $main-color-dark;
+  padding: 80px 24px 56px 24px;
+  color: #fff;
   &__button {
     border: none;
     background-color: transparent;
@@ -223,10 +223,10 @@ body {
   }
   &__form {
     position: relative;
-    width: 300px;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 24px;
+    margin-top: 48px;
     &::after {
       content: '';
       position: absolute;
@@ -237,12 +237,6 @@ body {
       background-color: #515151;
     }
   }
-  &__info {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -250,17 +244,88 @@ body {
   }
   &__input {
     width: 92%;
-    background-color: #ececec;
+    background-color: transparent;
     border: none;
     outline: none;
     font-family: 'Montserrat-Light', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.7;
-    &:focus {
-      color: #515151;
+    color: #fff;
+  }
+  &__text {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .email {
+    padding: 104px 124px 83px 124px;
+    display: flex;
+    justify-content: center;
+    &__form {
+      margin-top: 40px;
+    }
+    &__inner {
+      width: 518px;
+    }
+    &__title {
+      width: 367px;
     }
   }
+}
+
+@media (min-width: 1024px) {
+  .email {
+    padding: 124px 159px 103px 159px;
+    &__form {
+      width: 342px;
+      align-self: flex-end;
+    }
+    &__inner {
+      width: 100%;
+    }
+    &__title {
+      width: 417px;
+    }
+    &__title {
+      align-self: flex-start;
+    }
+    &__text {
+      width: 342px;
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .email {
+    padding: 140px 213px 116px 200px;
+    &__form {
+      width: 366px;
+    }
+    &__inner {
+      width: 1044px;
+    }
+    &__text {
+      width: 366px;
+    }
+  }
+}
+
+.email .section-title,
+.email .section-text {
+  color: #fff;
+}
+
+.footer {
+  background-color: transparent;
+}
+
+.footer-wrapper {
+  background-image: url(../images/news-email-bg.png);
+  background-size: cover;
+  background-position: bottom;
 }
 
 .header {
