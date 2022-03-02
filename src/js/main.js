@@ -37,6 +37,17 @@ const aboutSwiper = new Swiper('.swiper', {
   },
 });
 
+// swiper on page 'onenews'
+const oneNewsSwiper = new Swiper('.onenews', {
+  slidesPerView: 'auto',
+  spaceBetween: 26,
+  breakpoints: {
+    1024: {
+      spaceBetween: 40
+    }
+  },
+});
+
 // go to 'one-project' page when click on div with its image
 const projects = document.querySelectorAll('.projects__project');
 if (projects) {
