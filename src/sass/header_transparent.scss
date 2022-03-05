@@ -1,0 +1,79 @@
+@import 'header_dark';
+
+// all styles are in header_dark.scss
+// only color changes here
+
+h1 {
+  color: #fff;
+}
+
+.header {
+  background-color: transparent;
+  color: #fff;
+  &__inner {
+    &::before {
+      background-color: transparent;
+    }
+  }
+}
+
+.navigation {
+  background-color: $main-color-light;
+  &__link {
+    color: #080808;
+    &:hover {
+      color: #080808;
+    }
+  }
+  &__langs {
+    color: #080808;
+  }
+  &__city-select {
+    background-color: $main-color-light;
+    background-image: url(../images/city-icon-dark.svg),
+      url(../images/arrow-icon-dark.svg);
+    color: #080808;
+  }
+  &__contacts a {
+    color: #080808;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navigation {
+    background-color: transparent;
+    &__link {
+      color: #fff;
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.menu__burger-button {
+  &::before,
+  &::after {
+    background-color: #fff;
+  }
+}
+
+.button {
+  border: 1px solid #080808;
+  color: #080808;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.menu__request-button .button {
+  border: 1px solid #fff;
+  color: #fff;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.sticky {
+  background-color: rgba($main-color-dark, 0.5);
+}
