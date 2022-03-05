@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('../components/head.html', {
+    "title": "One Project",
+    "stylesheet": "css/oneproject.min.css"
+  })
+</head>
+<body>
+  <div class="header-wrapper">
+    @@include('../components/header.html')
+    <section class="section main-section">
+      <div class="main-section__inner">
+        <div class="main-section__title">
+          <h2 class="section-title">
+            Residence by the lighthouse
+          </h2>
+        </div>
+        <div class="main-section__text">
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.
+          </p>
+        </div>
+        <div class="main-section__info">
+          <div class="main-section__info-item">
+            <img class="main-section__icon"
+              src="images/oneproject-info-location.svg" alt="location">
+            Lodz, Poland
+          </div>
+          <div class="main-section__info-item">
+            <img class="main-section__icon"
+              src="images/oneproject-info-calendar.svg" alt="calendar">
+            16.10.2018
+          </div>
+          <div class="main-section__info-item">
+            <img class="main-section__icon"
+              src="images/oneproject-info-square.svg" alt="square">
+            80 sq.m
+          </div>
+        </div>
+        <div class="main-section__share">
+          <p>Share:</p>
+          <img src="images/oneproject-share-links.svg" alt="share">
+        </div>
+      </div>
+    </section>
+  </div>
+  <main class="main"></main>
+  <script src="js/main.min.js"></script>
+  <script>
+    let logo = document.querySelector('.header h1');
+    burgerMenuBtn.addEventListener('click', () => {
+      header.classList.toggle('header-color-dark');
+    });
+  </script>
+</body>
+</html>
