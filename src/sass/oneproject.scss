@@ -320,6 +320,113 @@ body {
   }
 }
 
+.request {
+  padding: 96px 24px;
+  background-color: #080808;
+  &__button {
+    margin-top: 48px;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__side-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    color: rgba(130, 130, 130, 0.35);
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 1px;
+      height: 57px;
+      background-color: rgba(196, 196, 196, 0.2);
+    }
+    &>p {
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+    }
+  }
+  &__text {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .request {
+    padding: 124px 48px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 109px;
+      text-align: center;
+    }
+    &__side-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 13px 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .request {
+    padding: 142px 56px;
+    &__button {
+      margin-top: 64px;
+    }
+    &__inner {
+      padding: 0 232px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .request {
+    padding: 180px 197px;
+    background: #080808
+      url(../images/projects-request-bg.png) center no-repeat;
+    &__button {
+      margin-top: 41px;
+    }
+    &__content {
+      align-self: flex-end;
+      width: 339px;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      text-align: left;
+    }
+    &__side-text {
+      display: none;
+    }
+    &__title {
+      width: 424px;
+    }
+  }
+}
+
+.request .button {
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .request .section-title {
+    line-height: 1.4em;
+  }
+}
+
 .section-subtitle {
   font-family: 'Montserrat-Bold', sans-serif;
   font-weight: 700;
