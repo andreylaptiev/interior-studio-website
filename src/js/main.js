@@ -58,27 +58,29 @@ if (projects) {
 
 // preloader
 function changeLoadPercentage() {
-  document.body.style.overflow = 'hidden';
   let preloader = document.querySelector('.preloader');
   let percentage = document.querySelector('#percentage');
-  setTimeout(() => {
-    percentage.textContent = '30%';
-  }, 500);
-  setTimeout(() => {
-    percentage.textContent = '100%';
-  }, 1000);
-  setTimeout(() => {
-    percentage.textContent = '';
-    document.querySelector('#preloader-static').textContent = 'HILIGHT';
-  }, 1500);
-  setTimeout(() => {
-    document.body.classList.add('loaded_hiding');
-  }, 2000);
-  setTimeout(() => {
-    document.body.classList.add('loaded');
-    document.body.classList.remove('loaded_hiding');
-    document.body.style.overflow = 'auto';
-  }, 2500);
+  if (percentage) {
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      percentage.textContent = '30%';
+    }, 500);
+    setTimeout(() => {
+      percentage.textContent = '100%';
+    }, 1000);
+    setTimeout(() => {
+      percentage.textContent = '';
+      document.querySelector('#preloader-static').textContent = 'HILIGHT';
+    }, 1500);
+    setTimeout(() => {
+      document.body.classList.add('loaded_hiding');
+    }, 2000);
+    setTimeout(() => {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+      document.body.style.overflow = 'auto';
+    }, 2500);
+  }
 }
 
 window.addEventListener('load', changeLoadPercentage);
