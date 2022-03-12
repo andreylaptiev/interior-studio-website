@@ -6,6 +6,10 @@ body {
   background-color: $main-color-light;
 }
 
+._lock {
+  overflow: hidden !important;
+}
+
 .discover {
   display: flex;
   justify-content: flex-start;
@@ -28,7 +32,7 @@ body {
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
     margin: 0 8px;
   }
 }
@@ -69,10 +73,6 @@ body {
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
-}
-
-.main-section .discover__link {
-  color: #fff;
 }
 
 .main-section .section-title {
@@ -198,6 +198,10 @@ body {
       margin-bottom: 52px;
     }
   }
+}
+
+.philosophy .discover__link {
+  color: #000;
 }
 
 .philosophy {
@@ -340,12 +344,222 @@ body {
   }
 }
 
+.project5 {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 0;
+  &::before {
+    content: none !important;
+  }
+}
+
+.projects {
+  padding: 80px 24px 0 24px;
+  background-color: $main-color-dark;
+  &__description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    z-index: 2;
+  }
+  &__discover {
+    margin-top: 16px;
+  }
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 16px;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #fff;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__more-image {
+    width: 121px;
+    height: 161px;
+  }
+  &__more-link {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #080808;
+  }
+  &__our-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px 0;
+  }
+  &__project {
+    width: 100%;
+    height: 327px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 16.12%, rgba(0, 0, 0, 0.63) 101.15%);
+    }
+  }
+  &__text {
+    margin-bottom: 80px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+}
+
+.projects__project:hover::before {
+  content: none;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    padding: 104px 48px 0 48px;
+    &__description {
+      padding: 26px 32px 38px 32px;
+    }
+    &__discover {
+      margin-top: 24px;
+    }
+    &__inner {
+      align-items: center;
+    }
+    &__more-image {
+      width: 251px;
+      height: 331px;
+    }
+    &__project {
+      height: 672px;
+    }
+    &__text {
+      max-width: 455px;
+      margin-bottom: 104px;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    padding: 124px 56px 0 56px;
+    &__description {
+      padding: 32px;
+    }
+    &__more-image {
+      width: 168px;
+      height: 223px;
+    }
+    &__our-projects {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto-fill, 452px);
+      gap: 6px 6px;
+      grid-template-areas: 
+        'p1 p2'
+        'p3 p3'
+        'p4 p5';
+    }
+    &__project {
+      height: 452px;
+    }
+    &__text {
+      margin-bottom: 124px;
+    }
+  }
+  .project1 {grid-area: p1;}
+  .project2 {grid-area: p3;}
+  .project3 {grid-area: p2;}
+  .project4 {grid-area: p4;}
+  .project5 {grid-area: p5;}
+}
+
+@media (min-width: 1440px) {
+  .projects {
+    padding: 140px 64px 0 64px;
+    &__description {
+      display: none;
+    }
+    &__discover {
+      display: none;
+    }
+    &__more-image {
+      width: 243px;
+      height: 323px;
+    }
+    &__our-projects {
+      grid-template-rows: repeat(auto-fill, 653px);
+    }
+    &__project {
+      height: 653px;
+      &::before {
+        content: none;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24));
+      }
+    }
+    &__text {
+      margin-bottom: 140px;
+    }
+    &__title {
+      margin-bottom: 34px;
+    }
+  }
+  .projects__project:hover::before {
+    content: '';
+  }
+  .projects__project:hover .projects__description {
+    display: flex;
+  }
+}
+
+.projects__title .section-title {
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (min-width: 1440px) {
+  .projects__title .section-title {
+    font-size: 22px;
+  }
+}
+
 .section-text {
   font-family: 'Montserrat-Light', sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
   color: #080808;
+}
+
+.section-text_grey {
+  color: #828282;
+}
+
+.section-text_light {
+  color: #fff;
 }
 
 .section-title {
@@ -382,6 +596,10 @@ body {
   .section-title_main {
     font-size: 56px;
   }
+}
+
+.section-title_light {
+  color: #000;
 }
 
 .quote-symbol {
