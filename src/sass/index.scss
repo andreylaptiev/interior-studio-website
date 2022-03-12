@@ -1,0 +1,217 @@
+@import 'preloader';
+@import 'header_transparent';
+@import 'footer_dark';
+
+body {
+  background-color: $main-color-light;
+}
+
+.discover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 8px;
+    height: 1px;
+    background-color: rgba(49, 49, 49, 0.2);
+  }
+  &::after {
+    content: '';
+    width: 56px;
+    height: 1px;
+    background-color: rgba(49, 49, 49, 0.2);
+  }
+  &__link {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 8px;
+  }
+}
+
+.header-wrapper {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.24),
+    rgba(0, 0, 0, 0.24)), url(../images/main-page-header-bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.header-color-dark {
+  color: #080808;
+}
+
+.header-color-dark h1 {
+  color: #080808;
+}
+
+.header-color-dark .menu__burger-button {
+  &::before,
+  &::after {
+    background-color: #080808;
+  }
+}
+
+.header-color-dark .button {
+  border: 1px solid #080808;
+  color: #080808;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.main-section {
+  padding: 216px 24px 24px 24px;
+  &__city-select {
+    appearance:none;
+    outline: none;
+    background-color: transparent;
+    background-image: url(../images/city-icon.svg),
+      url(../images/arrow-icon.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 14px center, 90% center;
+    width: 117px;
+    height: 24px;
+    padding-left: 28px;
+    border: 1px solid #C4C4C4;
+    border-radius: 88px;
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #fff;
+  }
+  &__city-select option {
+    color: #000;
+  }
+  &__contacts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__contacts a {
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #fff;
+  }
+  &__discover {
+    margin-bottom: 111px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__langs {
+    display: none;
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #fff;
+  }
+  &__title {
+    max-width: 285px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-section {
+    padding: 383px 48px 32px 48px;
+    &__city {
+      margin-right: 32px;
+    }
+    &__contacts {
+      justify-content: flex-start;
+    }
+    &__discover {
+      margin-left: 76px;
+      margin-bottom: 320px;
+    }
+    &__info {
+      flex-direction: row;
+      align-items: center;
+      gap: 0 32px;
+    }
+    &__langs {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 15px;
+      margin-right: 64px; 
+    }
+    &__title {
+      margin-left: 76px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-section {
+    padding: 283px 56px 32px 56px;
+    &__discover {
+      margin-left: 103px;
+      margin-bottom: 216px;
+    }
+    &__title {
+      max-width: 440px;
+      margin-left: 103px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-section {
+    padding: 279px 64px 40px 64px;
+    &__discover {
+      margin-left: 200px;
+      margin-bottom: 216px;
+    }
+    &__title {
+      max-width: 500px;
+      margin-left: 200px;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.section-title {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2em;
+  color: #fff;
+}
+
+.section-title_main {
+  font-size: 44px;
+}
+
+@media (min-width: 1024px) {
+  .section-title_main {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-title_main {
+    font-size: 56px;
+  }
+}

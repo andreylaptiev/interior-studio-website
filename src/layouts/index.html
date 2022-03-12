@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Document</title>
+  @@include('../components/head.html', {
+    "title": "Home",
+    "stylesheet": "css/index.min.css"
+  })
+  <link rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
+  @@include('../components/preloader.html')
+  <div class="header-wrapper">
+    @@include('../components/header.html')
+    <section class="section main-section">
+      <div class="main-section__inner">
+        <div class="main-section__title">
+          <h2 class="section-title section-title_main">
+            Thoughtful making of space
+          </h2>
+        </div>
+        <div class="main-section__discover discover">
+          <a class="discover__link" href="oneproject.html">
+            DISCOVER MORE
+          </a>
+        </div>
+        <div class="main-section__contacts">
+          <div class="main-section__langs">
+            <span>Fb</span>
+            <span>In</span>
+            <span>Be</span>
+          </div>
+          <div class="main-section__city">
+            <select class="main-section__city-select">
+              <option selected value="Berlin">Berlin</option>
+              <option value="Paris">Paris</option>
+            </select>
+          </div>
+          <div class="main-section__info">
+            <div class="main-section__phone">
+              <a href="tel:+380935705222">+380935705222</a>
+            </div>
+            <div class="main-section__email">
+              <a href="mail:info@hi-light.pl">info@hi-light.pl</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script>
+    let logo = document.querySelector('.header h1');
+    burgerMenuBtn.addEventListener('click', () => {
+      header.classList.toggle('header-color-dark');
+    });
+  </script>
 </body>
 </html>
