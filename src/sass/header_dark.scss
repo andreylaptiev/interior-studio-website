@@ -276,6 +276,7 @@ h1 {
   &__burger {
     width: 28px;
     z-index: 5;
+    cursor: pointer;
   }
   &__request-button {
     display: none;
