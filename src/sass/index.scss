@@ -546,6 +546,121 @@ body {
   }
 }
 
+.request {
+  padding: 96px 24px;
+  background-color: $main-color-dark;
+  &__button {
+    margin-top: 48px;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__side-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    color: rgba(130, 130, 130, 0.35);
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 1px;
+      height: 57px;
+      background-color: rgba(196, 196, 196, 0.2);
+    }
+    &>p {
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+    }
+  }
+  &__text {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .request {
+    padding: 124px 48px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 112px;
+      text-align: center;
+    }
+    &__side-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 13px 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .request {
+    padding: 142px 56px;
+    &__button {
+      margin-top: 64px;
+    }
+    &__inner {
+      padding: 0 224px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .request {
+    padding: 180px 64px;
+    background: $main-color-dark
+      url(../images/projects-request-bg.png) center no-repeat;
+    &__button {
+      margin-top: 41px;
+    }
+    &__content {
+      align-self: flex-end;
+      max-width: 339px;
+    }
+    &__inner {
+      padding: 0 133px;
+      text-align: left;
+    }
+    &__side-text {
+      display: none;
+    }
+    &__title {
+      max-width: 424px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.request .button {
+  width: 183px;
+  height: 48px;
+  border: 1px solid #fff;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.request .section-text,
+.request .section-title {
+  color: #fff;
+}
+
 .section-text {
   font-family: 'Montserrat-Light', sans-serif;
   font-weight: 300;
