@@ -74,8 +74,8 @@ function images() {
 function build() {
   return src([
     'src/*.html',
-    'src/css/style.min.css',
-    'src/js/main.min.js',
+    'src/css/**/*.min.css',
+    'src/js/**/*.min.js',
     'src/fonts/**/*',
   ], {base: 'src/'})
     .pipe(dest('dist/'));
