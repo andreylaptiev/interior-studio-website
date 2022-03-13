@@ -1,9 +1,14 @@
+@import 'preloader';
 @import 'header_light';
 @import 'footer_light';
 // button styles are imported with header_light
 
 body {
   background-color: $main-color-light;
+}
+
+._lock {
+  overflow: hidden !important;
 }
 
 .discover {
@@ -229,7 +234,6 @@ body {
       display: none;
     }
     &__inner {
-      // max-width: 1314px;
       grid-template-rows: repeat(auto-fill, 653px);
     }
     &__project {
